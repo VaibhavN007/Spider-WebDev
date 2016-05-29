@@ -1,0 +1,87 @@
+<html>
+<head>
+<style>
+.container{
+perspective:700;
+}
+
+.cards{
+	position:relative;
+	margin:20px;
+	height:200px;
+	width:200px;
+}
+
+.card__front , .card__back{
+	position:absolute;
+	top:0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	-webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+	
+	color:#fff;
+}
+
+.card__front{
+	background-color:#4CAF10;
+}
+.card__back{
+	background-color:#ff5078;
+	-webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+/* click effect */
+.card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+</style>
+<head>
+
+<body>
+<div class="container">
+	<div class="card effect__click">
+		
+		<div class="card__front">
+			Front
+		</div>
+		
+		<div class="card__back">
+			Back
+		</div>
+		
+	</div>
+</div>
+
+
+<script>
+(function() {
+  var cards = document.querySelectorAll(".card.effect__click");
+  for ( var i  = 0, len = cards.length; i < len; i++ ) {
+    var card = cards[i];
+    clickListener( card );
+  }
+
+  function clickListener(card) {
+    card.addEventListener( "click", function() {
+      var c = this.classList;
+      c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+    });
+  }
+})();
+</script>
+
+</body>
+
+</html>
