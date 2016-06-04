@@ -1,0 +1,426 @@
+<html>
+<head>
+<style>
+.outerdiv{
+position:relative;
+top:100px;
+left:400px;
+}
+
+.container{
+perspective:700;
+position:absolute;
+}
+
+.card__front , .card__back{
+	position:absolute;
+	top:0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	-webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+	
+	color:#fff;
+}
+
+.dispImg{
+	font-family: "Times New Roman", Times, serif;
+	font-size:3.5em;
+	font-weight:normal;
+	position:absolute;
+	left:39%;
+	top:20%;
+	color:#ffffff;
+}
+
+.card__front{
+	opacity:1;
+	filter:alpha(opacity=100%);
+}
+.card__back{
+	opacity:1;
+	filter:alpha(opacity=100%);
+	-webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+/* click effect */
+.card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+.result{
+	position:absolute;
+	top:560px;
+	left:500px;
+}
+#heading{
+	position:absolute;
+	left:500px;
+	color:red;
+}
+span{
+	color:blue;
+}
+</style>
+
+
+</head>
+
+<body background="back.jpg" height="100%" width="100%">  
+<h1 id="heading"> Memory Game<h1>
+<div class="result">
+<span>Score : </span><span id="score">0</span><br><br>
+<span>No. of Clicks : </span><span id="clicks">0</span>
+</div>
+<div class="outerdiv">
+<div class="container" style="top:0px; left:0px;">
+	<div class="card 0 effect__click" id="tile0">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId0" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+<div class="container" style="top:0px; left:100px;">
+	<div class="card 1 effect__click" id="tile1">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId1" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+<div class="container" style="top:0px; left:200px;">
+	<div class="card 2 effect__click" id="tile2">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId2" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:0px; left:300px;">
+	<div class="card 3 effect__click" id="tile3">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId3" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:100px; left:0px;">
+	<div class="card 4 effect__click" id="tile4">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId4" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:100px; left:100px;">
+	<div class="card 5 effect__click" id="tile5">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId5" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:100px; left:200px;">
+	<div class="card 6 effect__click" id="tile6">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId6" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:100px; left:300px;">
+	<div class="card 7 effect__click" id="tile7">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId7" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:200px; left:0px;">
+	<div class="card 8 effect__click" id="tile8">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId8" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:200px; left:100px;">
+	<div class="card 9 effect__click" id="tile9">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId9" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:200px; left:200px;">
+	<div class="card 10 effect__click" id="tile10">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId10" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:200px; left:300px;">
+	<div class="card 11 effect__click" id="tile11">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId11" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:300px; left:0px;">
+	<div class="card 12 effect__click" id="tile12">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId12" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:300px; left:100px;">
+	<div class="card 13 effect__click" id="tile13">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId13" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:300px; left:200px;">
+	<div class="card 14 effect__click" id="tile14">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId14" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="top:300px; left:300px;">
+	<div class="card 15 effect__click" id="tile15">
+		
+		<div class="card__front">
+			<img src="ques.png" height="100px" width="100px">
+		</div>
+		
+		<div class="card__back">
+			<img id="imageId15" height="100px" width="100px">
+		</div>
+		
+	</div>
+</div>
+</div>
+<script>
+(function() {
+   var beginTime= new Date();
+   beginTime=beginTime.getTime();
+   //making an array with elements form 0 to 15 in random order
+   var orderedArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+   var randomArray = [];
+   var i,j,k,randomIndex;
+   var noOfClicks=0;
+   var tile1,tile2;
+   var remTiles=16;
+   i=0;
+   var clickedArray=[];
+   var clickedIndex=0;
+   var tiles = document.getElementsByClassName('container');
+      
+   while(i<16){
+		randomIndex = Math.floor(Math.random()*15.9999999);
+		if(orderedArray[randomIndex]!=(-1)){
+			randomArray[i]=orderedArray[randomIndex];
+			i++;
+			orderedArray[randomIndex]=-1;
+		}
+   }
+  //finished making random array
+  
+  //displaying values in tiles
+  var dispImg = ["apple.png","google.png","youtube.png","andriod.png","ubuntu.png","messenger.png","facebook.png","message.png"];
+	for(j=0,k=0;k<8;k++){
+		document.getElementById('imageId'+randomArray[j]).src=dispImg[k];
+		j=j+1;
+		document.getElementById('imageId'+randomArray[j]).src=dispImg[k];
+		j=j+1;
+	}
+  //finished displaing values
+  
+  var cards = document.querySelectorAll(".card.effect__click");
+  for ( var i  = 0, len = cards.length; i < len; i++ ) {
+    var card = cards[i];
+    clickListener( card );
+  }
+
+  function clickListener(card) {
+    card.addEventListener( "click", function() {
+	  
+      var c = this.classList;
+	  noOfClicks++;
+	  document.getElementById("clicks").innerHTML=noOfClicks;
+	  if(noOfClicks==1){
+		card1 = c.item(1);
+		c.add("flipped");
+	  }
+	  else if(noOfClicks==2){
+		card2=c.item(1);
+		c.add("flipped");
+	  }
+	  else if(noOfClicks>2){
+		document.getElementsByClassName(card1)[0].classList.remove("flipped");
+		card1=card2;
+		card2=c.item(1);
+		document.getElementsByClassName(card2)[0].classList.add("flipped");
+		
+		clickedArray[clickedIndex]=c.item(1);
+		userClickedTile1=clickedArray[clickedIndex-1];
+		userClickedTile2=clickedArray[clickedIndex];
+		clickedIndex++;
+		compare();
+		
+		
+		function compare(){
+			
+		for(v=0;v<=14;){
+		
+			match1=randomArray[v];
+			match2=randomArray[v+1];
+			v=v+2;
+			
+			if(((userClickedTile1==match1 && userClickedTile2==match2)||(userClickedTile1==match2 && userClickedTile2==match1))&&(!(userClickedTile1==userClickedTile2))){
+				//tiles[match1].style.display='none';   
+				//tiles[match2].style.display='none';
+				tiles[match1].style.visibility='hidden';
+				tiles[match2].style.visibility='hidden';
+				remTiles=remTiles-2;
+				document.getElementById("score").innerHTML=(16-remTiles)/2;
+			}			
+			if(remTiles<=0){
+				setTimeout(uwin,100);
+				break;
+			}
+		}
+		
+		function uwin(){
+			var endTime = new Date();
+			endTime=endTime.getTime();
+			var timeTaken = endTime-beginTime;
+			timeTaken = Math.round(timeTaken/1000);
+			alert("You Have Won !! \n Time Taken : "+timeTaken+" seconds");
+			//window.location.reload();
+		}
+		
+		return null;
+		}
+		
+	  }
+	  else{
+		window.location.reload();
+	  }
+	  
+	});
+	
+  }
+  
+  
+})();
+
+
+</script>
+</body>
+
+</html>
