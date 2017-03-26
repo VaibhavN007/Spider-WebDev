@@ -45,13 +45,21 @@ body
 .name
 {
 	font-size: 3em;
+	margin-bottom: 1px;
 }
-.sub_text
+.about
 {
 	font-size: 1.3em;
 	margin: auto 20%;
 	border-bottom: 1px dashed #777;
 	min-width: 200px;
+}
+.sub_text
+{
+	margin-top: 2px;
+	margin-bottom: 25px;
+	font-size: 1em;
+	color: #ddd;
 }
 .skills
 {
