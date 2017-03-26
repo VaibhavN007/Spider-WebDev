@@ -1,0 +1,177 @@
+body
+{
+	background-color: #333;
+}
+.cover
+{
+	display: block;
+	width: 100vw;
+	text-align: center;
+	margin-top: 30px;
+}
+.back_svg
+{
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	opacity: .07;
+	flex-wrap: wrap;
+	z-index: -1;
+	justify-content: space-around;
+}
+.back_svg svg
+{
+	height: 100%;
+	width: 100%;
+	display: block;
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+}
+.cover_text
+{
+	position: absolute;
+	display: block;
+	color: white;
+	font-family: Lato;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 1;
+	width: 100%;
+}
+.name
+{
+	font-size: 3em;
+}
+.sub_text
+{
+	font-size: 1.3em;
+	margin: auto 20%;
+	border-bottom: 1px dashed #777;
+	min-width: 200px;
+}
+.skills
+{
+	position: relative;
+	display: flex;
+	width: 90vw;
+	max-width: 450px;
+	min-width: 100px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.skills_head
+{
+	position: relative;
+	display: flex;
+	opacity: .85;
+	width: 200px;
+	margin-top: 20px;
+	height: 75px;
+	border-radius: 100px;
+	background-color: cyan;
+	padding-left: 20px;
+	padding-right: 20px;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #333;
+	font-size: 1.4em;
+}
+.skills_head img
+{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	padding: 8px;
+	margin: 0px;
+	background-color: transparent;
+	background: transparent;
+	opacity: .8;
+}
+.skills
+{
+	width: 70%;
+	min-width: 260px;
+	border-radius: 20px;
+	margin-top: 10px;
+	color: #000;
+	background-color: cyan;
+	opacity: .85;
+	padding: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.skills h2
+{
+	padding: 0px;
+	margin: 0px;
+	font-weight: bold;
+	display: block;
+	position: relative;
+	padding: 10px;
+}
+.skills h4
+{
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+.contact
+{
+	width: 280px !important;
+}
+.contact a img, .contact a svg
+{
+	width: 50px;
+	height: 50px;
+}
+@media screen and (min-width: 1000px) {	
+	.back_svg .div_svg
+	{
+		display: inline-block;
+		width: 70px;
+		height: 70px;
+		margin: 2% 100px;
+	}
+	.cover_text
+	{
+		margin-top: 260px;
+	}
+}
+@media screen and (max-width: 1000px) and (min-width: 400px) {	
+	.back_svg .div_svg
+	{
+		display: inline-block;
+		width: 53px;
+		height: 53px;
+		margin: 25px 50px;
+	}
+	.cover_text
+	{
+		margin-top: 255px;
+	}
+}
+@media screen and (max-width: 400px) {	
+	.back_svg .div_svg
+	{
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		margin: 18px 35px;
+	}
+	.cover_text
+	{
+		margin-top: 360px;
+	}
+}
